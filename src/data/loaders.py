@@ -13,6 +13,22 @@ def load_bike_counts(filepath):
     """
     return pd.read_csv(filepath)
 
+def load_weather(filepath):
+    """
+    Load weather data from a CSV file.
+
+    Parameters
+    ----------
+    filepath : str or pathlib.Path
+        Path to the weather CSV file.
+
+    Returns
+    -------
+    pandas.DataFrame
+        Weather observations loaded into a DataFrame.
+    """
+    return pd.read_csv(filepath)
+
 def get_weather_data(start_date, end_date):
     url = (
         "https://archive-api.open-meteo.com/v1/archive"
